@@ -1,0 +1,21 @@
+{
+  "name": "content-admin",
+  "description": "Content Administration Application for touristic promotion.",
+  "main": "index.js",
+  "authors": [
+    "Sebastian Pulido"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

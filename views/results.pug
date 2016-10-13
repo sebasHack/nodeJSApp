@@ -1,0 +1,33 @@
+extends ./main-layout.pug
+include ./mixins/results-helpers
+  
+block  body
+  div( class="container")
+    h1( class="destinos-title-font" ) #{__("Results")}
+    include ./partials/search-box.pug
+    hgroup( class="mb20")
+      h4( class="destinos-text-font" )
+        if search_words 
+          strong() #{results_length}
+          if results_length === 1
+            |  #{__("result was found for:")}
+          else
+            |  #{__("results were found for:")}
+          strong()  #{search_words}
+        else
+          strong #{__("Make a search!")}
+    if results_length > 0
+      each result in results
+        +make_result(result)
+    include ./partials/logo-link.pug
+    ul( class="pager" )
+      li( class= prev_url === "#" ? "previous disabled" : "")
+        a( href=prev_url ) 
+          h4( class="destinos-title-font" ) < Prev
+      li
+        a( href="#" style="color: black")
+          h4( class="destinos-title-font") #{page}
+      li( class= next_url ===  "#" ? "next disabled" : "" )
+        a( href=next_url ) 
+          h4( class="destinos-title-font" ) #{__("Next >")}
+        

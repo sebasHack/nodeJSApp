@@ -1,0 +1,12 @@
+extends ./main-layout.pug
+
+block body
+  div( class="container")
+    br
+    h1( class="destinos-title-font text-center" ) #{__("Content Policies")}
+    br
+    if locale === 'en'
+      include ./partials/policies_eng
+    else 
+      include ./partials/policies_esp
+    include ./partials/logo-link.pug

@@ -1,0 +1,78 @@
+$primary-color: #eee;
+$footer-color: #e6e6fa;
+$jumbotron-color: #ffffff;
+
+/* MAIN LAYOUT */
+
+body {
+  background-color: $primary-color;
+
+}
+
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+	        
+footer {
+  padding: 25px;
+  background-color: $footer-color;
+}
+
+body {
+  padding-top: 50px;
+}
+
+
+/*END OF MAIN LAYOUT*/
+  
+
+/* HOME PAGE */
+
+.carousel-inner img {
+  width: 100%; /* Set width to 100% */
+  margin: auto;
+  max-height:550px;
+  min-height: 550px;
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none;
+   }
+}
+
+.container .jumbotron {
+  border-radius: 0px;
+  background-color: $jumbotron-color;
+}
+/* END OF HOME PAGE*/
+  
+/* FONTS */
+
+@font-face {
+  font-family: 'Oleo Script';
+  src: url('../fonts/Oleo_Script/OleoScript-Regular.ttf');
+}
+
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('../fonts/Dosis/Dosis-Regular.ttf');
+}
+
+  
+.destinos-title-font {
+  font-family: 'Oleo Script', cursive;
+}
+
+.destinos-text-font {
+  font-family: 'Dosis', sans-serif;
+  font-size: 19px;
+}
+
+
+
+/* END OF FONTS */

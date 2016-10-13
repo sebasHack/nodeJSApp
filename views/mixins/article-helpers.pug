@@ -1,0 +1,80 @@
+mixin article_header(article)
+  div( class="container" style="padding-top: 60px" )
+    div( class="jumbotron text-center" )
+      h1( class="destinos-title-font" ) #{article.title}
+      img( class="img-responsive" src=article.main_image_url 
+           alt="Image" style="width: 100%")
+      h4( class="destinos-text-font" ) 
+        strong #{__("By")} #{article.author} | #{article.pub_date}
+      div( style="padding-top: 35px")
+        p( class="destinos-text-font" ) #{article.abstract} 
+  
+mixin right_pic_section(section)
+  div( class="row" style="padding-top: 70px")
+    div( class="col-sm-6") 
+      h2
+        strong( class="destinos-title-font" ) #{section.title}
+      br
+      p( class="text-justify" ) #{section.text}
+    div( class="col-sm-6")
+      img( src=section.image_url alt="Image" class="img-responsive" 
+           style="width: 550px; height: 500px" )
+
+mixin left_pic_section(section)
+  div( class="row" style="padding-top: 70px")
+    div( class="col-sm-6")
+      img( src=section.image_url alt="Image" class="img-responsive"
+           style="width: 550px; height: 500px " )
+    div( class="col-sm-6") 
+      h2( class="destinos-title-font" )
+        strong #{section.title}
+      br
+      p( class="text-justify" ) #{section.text}
+
+mixin down_pic_section(section)
+  div( class="row" style="padding-top: 70px")
+    div( class="col-sm-10") 
+      h2(class="destinos-title-font")
+        strong #{section.title}
+      br
+      p( class="text-justify" ) #{section.text}
+  div( class="row" style="padding-top: 20px") 
+    div( class="col-sm-12")
+      img( src=section.image_url alt="Image" class="img-responsive" 
+           style="width: 100%; height: 550px" )
+
+mixin single_video_frame(url, title)
+  div( class="text-center" style="padding-top: 40px; padding-bottom: 20px" )
+    h2( class="destinos-title-font" ) #{title}
+    iframe( iframe width="560" height="315" src=url 
+           frameborder="0" allowfullscreen )
+
+mixin double_video_frame(url1, title1, url2, title2)
+  div( class="row text-center destinos-title-font" 
+       style="padding-top: 40px; padding-bottom: 20px" )
+    div( class="col-sm-1")
+    div( class="col-sm-5")
+      h2 #{title1}
+      iframe( iframe width="300" height="310" src=url1 
+              frameborder="0" allowfullscreen )
+    div( class="col-sm-5")
+      h2 #{title2}
+      iframe( iframe width="300" height="310" src=url2 
+              frameborder="0" allowfullscreen )
+    div( class="col-sm-1")
+    
+mixin share_article(article_id)
+  div( class="row text-center") 
+    div( class="col-sm-4") 
+    div( class="col-sm-4 well" style="background-color: white")
+      h3( class="destinos-title-font" ) 
+        strong #{ __("Share This Article on Facebook!") }
+      div( class="fb-like" data-href="/publications/"+article_id data-layout="button_count" 
+           data-action="like" data-show-faces="false" data-share="true" data-width="100" ) 
+          | Compartir    
+    div( class="col-sm-4")      
+
+    
+    
+          
+      

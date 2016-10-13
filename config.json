@@ -1,0 +1,25 @@
+{
+    "production": {
+	"es_settings": {
+	    "es_host": "production_host",
+	    "index_name": "articles_prod",
+	    "index_settings": {
+	
+	    }
+	}
+    },
+    "development": {
+	"es_settings": {
+	    "es_host": "localhost:9200",
+	    "index_name": "articles_devel",
+	    "index_settings": {
+
+	    }
+	} 
+    },
+    "i18n_config": {	
+	"locales": ["es", "en"],
+	"defaultLocale": "en",
+	"cookieName": "locale"
+    }
+}

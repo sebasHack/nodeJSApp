@@ -1,0 +1,23 @@
+extends ./main-layout.pug
+include ./mixins/home-helpers
+
+block body
+  include ./partials/home-carousel.pug  
+  div( class="container text-center")
+    br
+    h1( class="destinos-title-font" ) #{__("Amazing Experiences")}
+    br
+    include ./partials/fb-home-like.pug
+    h1( class="destinos-title-font" ) ...
+    +abstract(newest_abstract)
+    each pair in abstracts
+      +abstract2(pair)
+    +abstract3(oldest_abstracts)
+    div(class="jumbotron")
+      h3( class="destinos-title-font" ) #{__("Find more amazing articles:")}
+      include ./partials/search-box.pug
+    include ./partials/fb-home-like.pug
+    div( style="padding-bottom: 25px" )
+      img( src="/static/logos/transport.svg" height="300" width="300" alt="Image" )
+    
+    

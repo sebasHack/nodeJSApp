@@ -1,0 +1,12 @@
+div(id="searchModal" class="modal fade" role="dialog")
+  div( class="modal-dialog" )
+    //Modal Content
+    div( class="modal-content" )
+      div( class="modal-header" )
+        button( type="button" class="close" data-dismiss="modal" ) &times; 
+        h4( class="modal-title destinos-title-font")  
+          | #{__("Search amazing experiences")}
+          | #[span(class="glyphicon glyphicon-sunglasses")]
+      div( class="modal-body" )
+        include ./search-box.pug
+          

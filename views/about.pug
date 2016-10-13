@@ -1,0 +1,12 @@
+extends ./main-layout.pug
+
+block body
+  div( class="container")
+    br
+    h1( class="destinos-title-font text-center" ) #{__("Who are we?")}
+    br
+    if locale === 'en'
+      include ./partials/about_eng
+    else 
+      include ./partials/about_esp
+    include ./partials/logo-link.pug 

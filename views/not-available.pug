@@ -1,0 +1,20 @@
+extends ./main-layout.pug
+
+block body
+  br
+  br
+  br
+  div( class="container" )
+    div( class="jumbotron" )
+      h1(class="destinos-title-font") #{__("This page is not available")}
+      br
+      h3 
+        | #{__("The link you followed may be broken, or the page may have been removed.")}
+      br
+      br
+      a( href="/" ) 
+        p(class="text-center")
+          strong Go Back to DestinosIO
+    br
+    include ./partials/logo-link.pug
+    br

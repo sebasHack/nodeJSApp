@@ -1,0 +1,12 @@
+mixin make_result(result)
+  section( class="col-xs-12 col-sm-6 col-md-12 destinos-text-font" )
+    article( class="search-result row" )
+      div( class="col-xs-12 col-sm-12 col-md-3" )
+        a( href="/publications/"+result.id title="Lorem ipsum" class="thumbnail" )
+          img( class="img-responsive" img src=result.thumbnail_url alt="Image" )       
+      div( class="col-xs-12 col-sm-12 col-md-7 excerpet")
+        h3( class="destinos-title-font") 
+          a( href="/publications/"+result.id style="color: black") #{result.title} 
+        p(class="text-muted") #{__("By")} #{result.author} | #{result.pub_date} 
+        p #{result.abstract}
+      span( class="clearfix borda" )
